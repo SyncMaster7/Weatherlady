@@ -1,7 +1,6 @@
 package edu.weatherlady.database;
 
 import jakarta.persistence.*;
-import java.util.UUID;
 
 @Entity
 @Table(name = "locationinfo")
@@ -10,37 +9,39 @@ public class LocationInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true, nullable = false)
-    private UUID locationId;
+    private int locationId;
     @Column(name = "lon", nullable = false)
-    private float lon;
+    private double lon;
     @Column(name = "lat", nullable = false)
-    private float lat;
+    private double lat;
     @Column(name = "region")
     private String region;
     @Column(name = "country_name", nullable = false)
     private String countryName;
+    @Column(name = "city_name", nullable = false)
+    private String cityName;
 
-    public UUID getLocationId() {
+    public int getLocationId() {
         return locationId;
     }
 
-    public void setLocationId(UUID locationId) {
+    public void setLocationId(int locationId) {
         this.locationId = locationId;
     }
 
-    public float getLon() {
+    public double getLon() {
         return lon;
     }
 
-    public void setLon(float lon) {
+    public void setLon(double lon) {
         this.lon = lon;
     }
 
-    public float getLat() {
+    public double getLat() {
         return lat;
     }
 
-    public void setLat(float lat) {
+    public void setLat(double lat) {
         this.lat = lat;
     }
 
@@ -58,5 +59,13 @@ public class LocationInfo {
 
     public void setCountryName(String countryName) {
         this.countryName = countryName;
+    }
+
+    public String getCityName() {
+        return cityName;
+    }
+
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
     }
 }

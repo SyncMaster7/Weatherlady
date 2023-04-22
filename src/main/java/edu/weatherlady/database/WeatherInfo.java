@@ -2,7 +2,6 @@ package edu.weatherlady.database;
 
 import jakarta.persistence.*;
 import java.util.Date;
-import java.util.UUID;
 
 @Entity
 @Table(name = "weatherinfo")
@@ -11,7 +10,7 @@ public class WeatherInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true, nullable = false)
-    private UUID id;
+    private int id;
     @Column(name = "request_date")
     private Date requestDate;
     @Column(name = "city")
@@ -37,11 +36,11 @@ public class WeatherInfo {
     @Column(name = "Pressure")
     private float pressure;
 
-    public UUID getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(int id) {
         this.id = id;
     }
 
