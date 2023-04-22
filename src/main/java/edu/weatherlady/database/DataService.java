@@ -51,7 +51,7 @@ public class DataService {
 
     public static void getLocationInfo(int id) {
         EntityManager em = emf.createEntityManager();
-        String strQuery = "select * from locationinfo li where li.id=:id ";
+        String strQuery = "select c from LocationInfo c where c.id=" + id;
 
         TypedQuery<LocationInfo> tq = em.createQuery(strQuery, LocationInfo.class);
         List<LocationInfo> locationInfoList;
@@ -68,7 +68,7 @@ public class DataService {
 
     public static void getAllLocationInfo() {
         EntityManager em = emf.createEntityManager();
-        String strQuery = "select c from locationinfo c where c.id is not null";
+        String strQuery = "select c from LocationInfo c where c.id is not null";
 
         TypedQuery<LocationInfo> tq = em.createQuery(strQuery, LocationInfo.class);
         List<LocationInfo> locationInfoList;
