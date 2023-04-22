@@ -1,10 +1,11 @@
 package edu.weatherlady;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
 
-    public static final Scanner sc = new Scanner(System.in);
+    public static final Scanner sc = new Scanner(System.in).useLocale(Locale.US);
 
     public static void main(String[] args) {
 
@@ -21,7 +22,8 @@ public class Main {
                 case 0 -> printInstructions();
                 case 1 -> edu.weatherlady.database.DataService.getAllLocationInfo();
                 case 2 -> addLocationInfo();
-                case 3 -> quit = true;
+                case 3 -> getWeatherInfo();
+                case 4 -> quit = true;
             }
         }
     }
@@ -32,7 +34,8 @@ public class Main {
         System.out.println("\t 0 - To print choice options.");
         System.out.println("\t 1 - To print the list of location information.");
         System.out.println("\t 2 - To add a location to the database.");
-        System.out.println("\t 3 - To quit the application.\n");
+        System.out.println("\t 3 - To get weather information about desired location.");
+        System.out.println("\t 4 - To quit the application.\n");
     }
 
     public static void addLocationInfo() {
@@ -49,5 +52,9 @@ public class Main {
         String cityName = sc.nextLine();
 
         edu.weatherlady.database.DataService.addLocation(lat, lon, region, countryName, cityName);
+    }
+
+    public static void getWeatherInfo() {
+        System.out.println("Unfortunately this functionality is still under development ...");
     }
 }
