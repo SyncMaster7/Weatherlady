@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 19
+Package: edu.weatherlady
+Created-By: SDA
+Main-Class: edu.weatherlady.Main
