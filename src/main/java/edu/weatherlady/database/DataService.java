@@ -58,7 +58,8 @@ public class DataService {
 
         try {
             locationInfoList = tq.getResultList();
-            locationInfoList.forEach(locat -> System.out.println(locat.getCityName() + ", " + locat.getCountryName()));
+            locationInfoList.forEach(locat -> System.out.println(locat.getLocationId() + ". " + locat.getCityName() +
+                    ", " + locat.getCountryName() + " @ " + locat.getLat() + ", " + locat.getLon()));
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -67,6 +68,7 @@ public class DataService {
     }
 
     public static void getAllLocationInfo() {
+
         EntityManager em = emf.createEntityManager();
         String strQuery = "select c from LocationInfo c where c.id is not null";
 
@@ -75,7 +77,8 @@ public class DataService {
 
         try {
             locationInfoList = tq.getResultList();
-            locationInfoList.forEach(locat -> System.out.println(locat.getCityName() + ", " + locat.getCountryName()));
+            locationInfoList.forEach(locat -> System.out.println(locat.getLocationId() + ". " + locat.getCityName() +
+                    ", " + locat.getCountryName() + " @ " + locat.getLat() + ", " + locat.getLon()));
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -84,8 +87,9 @@ public class DataService {
     }
 
 //    public static void truncateTable(String tableName) {
+//
 //        EntityManager em = emf.createEntityManager();
-//        String strQuery = "truncate table locationinfo";
+//        String strQuery = "truncate table LocationInfo";
 //
 //        TypedQuery<LocationInfo> tq = em.createQuery(strQuery, LocationInfo.class);
 //
