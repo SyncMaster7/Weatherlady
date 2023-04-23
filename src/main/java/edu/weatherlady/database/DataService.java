@@ -10,7 +10,6 @@ public class DataService {
 //        addLocation(45.5797149, 9.2347872, "Europe", "Italy", "Monza");
 //        addLocation(43.7378806, 7.4052529, "Europe", "Monaco", "Monaco");
 //        addLocation(52.0899713, -1.0263459, "Europe", "England", "Silverstone");
-//        addLocation(59.43696, 24.75357, "Europe", "Estonia", "Tallinn");
 //        addLocation(50.4543583,5.9419142, "Europe", "Belgium", "Francorchamps");
 //        addLocation(45.5593046,-73.876681, "North America", "Canada", "Montreal");
 //        addLocation(-23.6814346,-46.924952, "South America", "Brazil", "Sao Paulo");
@@ -24,6 +23,8 @@ public class DataService {
 //        addLocation(-37.9696432,144.3937484, "Australia", "Australia", "Melbourne");
 //        addLocation(19.3208489,-99.4822713, "South America", "Mexico", "Mexico City");
 //        addLocation(26.0336078,50.5065873, "Middle East", "Bahrein", "Sakhir");
+//        addLocation(59.4717637,24.5734371, "Europe", "Estonia", "Tallinn");
+
 
 //        getLocationInfo(1);
 //        getAllLocationInfo();
