@@ -30,11 +30,11 @@ public class Main {
 
     public static void printInstructions() {
 
-        System.out.println("\nPress\n");
+        System.out.println("\nChoose\n");
         System.out.println("\t 0 - To print choice options.");
         System.out.println("\t 1 - To print the list of location information.");
         System.out.println("\t 2 - To add a location to the database.");
-        System.out.println("\t 3 - To get weather information about desired location.");
+        System.out.println("\t 3 - To get weather information for desired location.");
         System.out.println("\t 4 - To quit the application.\n");
     }
 
