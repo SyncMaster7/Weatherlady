@@ -1,6 +1,7 @@
 package edu.weatherlady.accuweather;
 
 import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
@@ -30,6 +31,8 @@ public class Connection {
                     "Connection response code is " + responseCode);
         } else {
 
+            System.out.println("\nHouston, we have a connection with response code ... " + responseCode);
+
             StringBuilder dataString = new StringBuilder();
             Scanner sc = new Scanner(url.openStream());
 
@@ -41,7 +44,12 @@ public class Connection {
             JSONParser parse = new JSONParser();
             JSONArray dataObject = (JSONArray) parse.parse(String.valueOf(dataString));;
 
+            System.out.println("\n========== This is all information received ==========");
             System.out.println(dataObject.get(0));
+
+            JSONObject countryData = (JSONObject) dataObject.get(0);
+            System.out.println("\n========== This is an information about 'temperature' ==========");
+            System.out.println(countryData.get("Temperature"));
         }
     }
 }
