@@ -139,4 +139,23 @@ public class WeatherInfo {
     public void setPressure(float pressure) {
         this.pressure = pressure;
     }
+
+    @Override
+    public String toString() {
+        return "WeatherInfo{" +
+                "id=" + id +
+                ", requestDate=" + requestDate +
+                ", city='" + city + '\'' +
+                ", location='" + location + '\'' +
+                ", temperature=" + temperature +
+                ", realFeelTemperature=" + realFeelTemperature +
+                ", relativeHumidity=" + relativeHumidity +
+                ", dewPoint=" + dewPoint +
+                ", windSpeed=" + windSpeed +
+                ", uvIndex=" + uvIndex +
+                ", uvIndexText='" + uvIndexText + '\'' +
+                ", visibility=" + visibility +
+                ", pressure=" + pressure +
+                '}';
+    }
 }

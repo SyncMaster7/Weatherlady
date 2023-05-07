@@ -68,4 +68,16 @@ public class LocationInfo {
     public void setCityName(String cityName) {
         this.cityName = cityName;
     }
+
+    @Override
+    public String toString() {
+        return "LocationInfo{" +
+                "locationId=" + locationId +
+                ", lon=" + lon +
+                ", lat=" + lat +
+                ", region='" + region + '\'' +
+                ", countryName='" + countryName + '\'' +
+                ", cityName='" + cityName + '\'' +
+                '}';
+    }
 }
