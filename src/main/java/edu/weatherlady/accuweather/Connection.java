@@ -42,7 +42,7 @@ public class Connection {
             sc.close();
 
             JSONParser parse = new JSONParser();
-            JSONArray dataObject = (JSONArray) parse.parse(String.valueOf(dataString));;
+            JSONArray dataObject = (JSONArray) parse.parse(String.valueOf(dataString));
 
             System.out.println("\n========== This is all information received ==========");
             System.out.println(dataObject.get(0));
