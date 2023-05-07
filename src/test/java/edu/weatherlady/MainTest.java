@@ -7,22 +7,22 @@ import org.junit.jupiter.api.Test;
 class MainTest {
 
     @Test
-    @Disabled ("Not yet implemented")
+    @Disabled ("Test #1 - Not yet implemented")
     void main() {
     }
 
     @Test
-    @Disabled ("Not yet implemented")
+    @Disabled ("Test #2 - Not yet implemented")
     void printInstructions() {
     }
 
     @Test
-    @Disabled ("Not yet implemented")
+    @Disabled ("Test #3 - Not yet implemented")
     void addLocationInfo() {
     }
 
     @Test
-    @Disabled ("Not yet implemented")
+    @Disabled ("Test #4 - Not yet implemented")
     void getWeatherInfo() {
     }
 }
